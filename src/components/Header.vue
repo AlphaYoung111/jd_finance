@@ -17,6 +17,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .header {
+  width: 100vw;
   color: #666;
   height: 100px;
   line-height: 100px;
