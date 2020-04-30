@@ -1,5 +1,5 @@
 <template lang="html">
-    <Panel title="公司信息" :class="['panel',cname]">
+    <Panel title="公司信息" :class="['s_panel',style_name]" cname="s_panel">
         <ul class="content">
             <li>
                 <img src="//img12.360buyimg.com/jrpmobile/jfs/t2842/350/3035567089/14791/5f6ff93d/577cf395N31e76288.png?width=1125&height=252" alt="">
@@ -29,70 +29,71 @@
 <script>
 import Panel from "@/views/core/Panel";
 export default {
-    components: {
-        Panel,
-    },
-    props: {
-        cname: {
-            type: String,
-            default: "",
-        },
-    },
-}
+  components: {
+    Panel
+  },
+  props: {
+    style_name: {
+      type: String,
+      default: ""
+    }
+  }
+};
 </script>
 
 <style lang="scss" scoped>
 @import "~@/assets/css/element.scss";
-  .panel{
-    @include panel;
-    margin-bottom: 100px;
-    &>h4{
-      display: none;
-    }
-    .content{
-      @include flex;
-      background: #F5F5F5;
-      li{
+.s_panel {
+  @include panel;
+  margin-bottom: 100px;
+  > h4 {
+    display: none;
+  }
+  
+  .content {
+    @include flex;
+    background: #f5f5f5;
+    li {
+      width: 100%;
+      text-align: center;
+      color: #999;
+      font-size: 24px;
+      > img {
         width: 100%;
-        text-align: center;
-        color: #999;
-        font-size: 24px;
-        >img{
-          width: 100%;
-          height: 143px;
-        }
-        &:nth-child(2){
-          @include flex(row);
-          height: 186px;
+        height: 143px;
+      }
+      &:nth-child(2) {
+        @include flex(row);
+        height: 186px;
+        box-sizing: border-box;
+        > div {
+          width: 33.3333%;
+          text-align: center;
           box-sizing: border-box;
-          >div{
-            width: 33.3333%;
+          padding-top: 20px;
+          img {
+            width: 90px;
+            height: 90px;
+          }
+          p {
+            font-size: 26px;
             text-align: center;
-            box-sizing: border-box;
-            padding-top: 20px;
-            img{
-              width: 90px;
-              height: 90px;
-            }
-            p{
-              font-size: 26px;
-              text-align: center;
-              display: block;
-              color: #999;
-              margin-top: 12px;
-              white-space: nowrap;
-              text-overflow: ellipsis;
-              overflow: hidden;
-            }
+            display: block;
+            color: #999;
+            margin-top: 12px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
           }
         }
-        &:nth-child(n+3){
-          padding: 24px 0;
-          height: 38px;
-          line-height: 38px;
-          border-top: 1px solid #ddd;
-        }
+      }
+      &:nth-child(n + 3) {
+        padding: 24px 0;
+        height: 38px;
+        line-height: 38px;
+        border-top: 1px solid #ddd;
       }
     }
   }
+}
 </style>

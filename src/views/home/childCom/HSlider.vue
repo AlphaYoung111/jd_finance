@@ -42,7 +42,7 @@ export default {
       // 推荐图标
       enters: [
         {
-          href: "home",
+          href: "download",
           img:
             "//img12.360buyimg.com/jrpmobile/jfs/t3991/64/2521945388/12110/93c0139/58d1e462Ncf294123.png?width=132&height=132",
           title: "优惠券"
@@ -75,7 +75,7 @@ export default {
       // 轮播组件类名
       h_slider: "h_slider",
       // 轮播项类名
-      sclass:'sclass'
+      sclass: "sclass"
     };
   }
 };
@@ -85,14 +85,14 @@ export default {
 .h_slider {
   margin-top: 120px;
 }
-.sclass{
-    width: 100%;
-    height: 160px;
-    img{
+.sclass {
+  width: 100%;
+  height: 160px;
+  img {
     width: 100%;
     height: 100%;
     // display: block;
-    }
+  }
 }
 .list {
   @include list(row);
